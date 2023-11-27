@@ -1,6 +1,6 @@
 import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 
-import { Entypo } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
 // para ter acesso as bibliotecas de ícones, entrar no link: https://icons.expo.fyi/Index
 
 export default function Item({ navigation, title }) {
@@ -13,7 +13,7 @@ export default function Item({ navigation, title }) {
         <TouchableOpacity onPress={() => { onPress(title) }}>
             <View style={styles.item}>
                 <Text style={styles.title}>{title}</Text>
-                <Entypo name="info-with-circle" size={25} color="#28A3CC" />
+                <AntDesign name="right" size={25} color="#28A3CC" />
             </View>
         </TouchableOpacity>
     )
