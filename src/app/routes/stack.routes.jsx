@@ -22,7 +22,7 @@ export default function StackRoutesLayout() {
             }
         }}>
             <Screen name="home" component={Home} options={{ title: 'Exercícios' }} />
-            <Screen name="details" component={Details} options={{ title: 'Detalhes e suas variações:' }} />
+            <Screen name="details" component={Details} options={{ title: 'Detalhes' }} />
         </Navigator>
     );
 }

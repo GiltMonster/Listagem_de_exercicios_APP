@@ -17,8 +17,34 @@ export default function Home({ navigation }) {
     //estado de carregamento
     const [loading, setLoading] = useState(true);
 
+    const pickerSelectStyles = {
+        inputIOS: {
+            fontSize: 16,
+            textAlign: 'center',
+            paddingVertical: 12,
+            paddingHorizontal: 10,
+            borderWidth: 1,
+            borderColor: 'gray',
+            borderRadius: 4,
+            color: 'black',
+            marginHorizontal: 50,
+            marginVertical: 5,
+        },
+        inputAndroid: {
+            fontSize: 16,
+            paddingHorizontal: 10,
+            paddingVertical: 8,
+            borderWidth: 0.5,
+            borderColor: 'purple',
+            borderRadius: 8,
+            color: 'black',
+            marginHorizontal: 50,
+            marginVertical: 5
+        },
+    };
+
     const placeholder = {
-        label: 'Selecione uma opção...',
+        label: 'Selecione um filtro...',
         value: null,
     };
 
@@ -78,6 +104,7 @@ export default function Home({ navigation }) {
                                 filtrarPorTipo(value);
                             }}
                             value={filter}
+                            style={pickerSelectStyles}
                         />
                         <FlatList
                             data={ filteredExercises == null ? exercises : filteredExercises }
@@ -87,7 +114,6 @@ export default function Home({ navigation }) {
                     </View>
             }
         </SafeAreaView>
-
     )
 }
 
@@ -95,5 +121,6 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
-    }
+        marginHorizontal: 3
+    },
 });
