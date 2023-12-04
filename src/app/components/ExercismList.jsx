@@ -1,4 +1,5 @@
 import { Text, View, StyleSheet } from "react-native";
+import { translateDifficulty, translateFilters, translateMuscle, translateEquipment, translateInstructions } from "../../util/translate";
 
 export default function ExercisesList({ item }) {
 
@@ -8,21 +9,21 @@ export default function ExercisesList({ item }) {
 
             <View style={styles.infoContent}>
 
-                <Text style={styles.text}>Instruções do exercício: {item.instructions}</Text>
+                <Text style={styles.text}>Instruções do exercício: {translateInstructions(item.instructions)}</Text>
 
                 <View style={styles.groupText}>
 
                     <View style={styles.textContainer}>
-                        <Text style={styles.text}>Equipamentos: {item.equipment}</Text>
+                        <Text style={styles.text}>Equipamentos: {translateEquipment(item.equipment)}</Text>
                     </View>
                     <View style={styles.textContainer}>
-                        <Text style={styles.text}>Dificuldade: {item.difficulty}</Text>
+                        <Text style={styles.text}>Dificuldade: {translateDifficulty(item.difficulty)}</Text>
                     </View>
                     <View style={styles.textContainer}>
-                        <Text style={styles.text}>Músculos: {item.muscle}</Text>
+                        <Text style={styles.text}>Músculos: {translateMuscle(item.muscle)}</Text>
                     </View>
                     <View style={styles.textContainer}>
-                        <Text style={styles.text}>Tipo: {item.type}</Text>
+                        <Text style={styles.text}>Tipo: {translateFilters(item.type)}</Text>
                     </View>
 
                 </View>
