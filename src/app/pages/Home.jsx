@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import RNPickerSelect from 'react-native-picker-select';
 import Item from "../components/ItemList";
 import { listExercises } from "../services/API_Call";
+import { translateFilters } from "../../util/translate";
 // para ter acesso as bibliotecas de ícones, entrar no link: https://icons.expo.fyi/Index
 
 export default function Home({ navigation }) {
@@ -15,7 +16,6 @@ export default function Home({ navigation }) {
     const [filter, setFilter] = useState([]);
     //estado de carregamento
     const [loading, setLoading] = useState(true);
-
 
     const placeholder = {
         label: 'Selecione uma opção...',
@@ -34,7 +34,6 @@ export default function Home({ navigation }) {
             });
     }, [])
 
-
     const getFilter = (dataFilter) => {
         let newArray = [];
         // cria um novo array so com os atributos 'type' do objeto original.
@@ -48,12 +47,12 @@ export default function Home({ navigation }) {
         });
         //gera esse objeto com com, "chave e valor" do selection
         setFilterOptions(newArray.map((data) => {
-            return { label: data, value: data }
+            return { label: translateFilters(data), value: data }
         }))
     };
 
     function filtrarPorTipo(nameExercise) {
-        console.log(nameExercise);
+        // console.log(nameExercise);
         if (nameExercise !== null) {
             setFilteredExercises(exercises.filter((exercise) => exercise.type === nameExercise));
         }else{
