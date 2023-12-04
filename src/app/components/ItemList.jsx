@@ -13,7 +13,7 @@ export default function Item({ navigation, title }) {
         <TouchableOpacity onPress={() => { onPress(title) }}>
             <View style={styles.item}>
                 <Text style={styles.title}>{title}</Text>
-                <AntDesign name="right" size={25} color="#28A3CC" />
+                <AntDesign name="right" size={25} color="#287271" />
             </View>
         </TouchableOpacity>
     )
@@ -33,8 +33,8 @@ const styles = StyleSheet.create({
         marginVertical: 4,
         marginHorizontal: 4,
         borderWidth: 1,
-        borderColor: '#28A3CC',
-        borderRadius: 5
+        borderColor: '#287271',
+        borderRadius: 15
     },
     title: {
         fontSize: 22,

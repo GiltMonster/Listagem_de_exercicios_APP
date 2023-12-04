@@ -11,7 +11,7 @@ export default function ExercisesList({ item }) {
 
                 <View style={styles.instructionsContainer}>
                     <Text style={styles.textTitle}>Instruções</Text>
-                    <Text style={styles.text}>{translateInstructions(item.instructions)}</Text>
+                    <Text style={styles.textInstruction}>{translateInstructions(item.instructions)}</Text>
                 </View>
 
                 <View style={styles.groupText}>
@@ -45,21 +45,21 @@ const styles = StyleSheet.create({
         justifyContent: "flex-start",
         backgroundColor: '#fbfbfb',
         padding: 10,
-        marginVertical: 5,
-        marginHorizontal: 5,
+        marginVertical: 15,
+        marginHorizontal: 15,
         borderWidth: 1,
-        borderColor: '#28A3CC',
-        borderRadius: 5
+        borderColor: '#287271',
+        borderRadius: 15
     },
     infoContent: {
         flex: 1,
-        backgroundColor: '#93b6c2',
+       // backgroundColor: '#93b6c2',
         padding: 10,
         marginVertical: 1,
         marginHorizontal: 1,
-        borderWidth: 1,
-        borderColor: '#28A3CC',
-        borderRadius: 5
+        // borderWidth: 1,
+        // borderColor: '#287271',
+        borderRadius: 15
     },
     groupText: {
         flex: 1,
@@ -70,9 +70,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-around',
         borderWidth: 1,
-        borderRadius: 5,
-        borderColor: '#28A3CC',
-        backgroundColor: '#78c5de',
+        borderRadius: 15,
+        borderColor: '#287271',
+        backgroundColor: '#569A99',
         marginVertical: 15,
         paddingHorizontal: 15,
     },
@@ -82,6 +82,13 @@ const styles = StyleSheet.create({
         paddingVertical: 5,
     },
     text: {
+        fontSize: 17,
+        textAlign: 'justify',
+        paddingVertical: 10,
+        paddingHorizontal: 13,
+        
+    },
+    textInstruction: {
         fontSize: 17,
         textAlign: 'justify',
         paddingVertical: 10,

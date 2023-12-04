@@ -14,7 +14,7 @@ export default function StackRoutesLayout() {
     return (
         <Navigator initialRouteName='home' screenOptions={{
             headerStyle: {
-                backgroundColor: '#28A3CC',
+                backgroundColor: '#287271',
             },
             headerTintColor: '#fafafa',
             headerTitleStyle: {
