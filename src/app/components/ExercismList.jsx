@@ -5,25 +5,32 @@ export default function ExercisesList({ item }) {
 
     return (
         <View style={styles.item}>
-            <Text style={styles.nome}>Exercício: {item.name}</Text>
+            <Text style={styles.nome}>{item.name}</Text>
 
             <View style={styles.infoContent}>
 
-                <Text style={styles.text}>Instruções do exercício: {translateInstructions(item.instructions)}</Text>
+                <View style={styles.instructionsContainer}>
+                    <Text style={styles.textTitle}>Instruções</Text>
+                    <Text style={styles.text}>{translateInstructions(item.instructions)}</Text>
+                </View>
 
                 <View style={styles.groupText}>
 
                     <View style={styles.textContainer}>
-                        <Text style={styles.text}>Equipamentos: {translateEquipment(item.equipment)}</Text>
+                        <Text style={styles.textTitle}>Equipamentos: </Text>
+                        <Text style={styles.text}>{translateEquipment(item.equipment)}</Text>
                     </View>
                     <View style={styles.textContainer}>
-                        <Text style={styles.text}>Dificuldade: {translateDifficulty(item.difficulty)}</Text>
+                        <Text style={styles.textTitle}>Dificuldade:</Text>
+                        <Text style={styles.text}>{translateDifficulty(item.difficulty)}</Text>
                     </View>
                     <View style={styles.textContainer}>
-                        <Text style={styles.text}>Músculos: {translateMuscle(item.muscle)}</Text>
+                        <Text style={styles.textTitle}>Músculos:</Text>
+                        <Text style={styles.text}>{translateMuscle(item.muscle)}</Text>
                     </View>
                     <View style={styles.textContainer}>
-                        <Text style={styles.text}>Tipo: {translateFilters(item.type)}</Text>
+                        <Text style={styles.textTitle}>Tipo:</Text>
+                        <Text style={styles.text}>{translateFilters(item.type)}</Text>
                     </View>
 
                 </View>
@@ -59,6 +66,9 @@ const styles = StyleSheet.create({
         marginVertical: 20
     },
     textContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-around',
         borderWidth: 1,
         borderRadius: 5,
         borderColor: '#28A3CC',
@@ -66,12 +76,23 @@ const styles = StyleSheet.create({
         marginVertical: 15,
         paddingHorizontal: 15,
     },
+    textTitle: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        paddingVertical: 5,
+    },
     text: {
         fontSize: 17,
+        textAlign: 'justify',
         paddingVertical: 10,
+        paddingHorizontal: 13
     },
     nome: {
         fontSize: 20,
+        fontWeight: 'bold',
         marginVertical: 10
     },
+    instructionsContainer: {
+        alignItems: 'center'
+    }
 });
