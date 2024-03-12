@@ -23,9 +23,9 @@ O Listagem_de_exercicios_APP é um aplicativo desenvolvido com React Native que 
   
 
 ![Captura de Tela 1](https://media.discordapp.net/attachments/1012087339780145214/1216897274500616203/Screenshot_2024-03-11-20-54-19-127_host.exp.exponent.jpg?ex=66020ee7&is=65ef99e7&hm=04be8ea74d06b9e19c9d62f6ace1019797168a56f1cc1a3798cf6511af10abb5&=&format=webp&width=416&height=924)
-* com um filtro selecionado:
+
 ![Captura de Tela 2](https://media.discordapp.net/attachments/1012087339780145214/1216897274777571469/Screenshot_2024-03-11-20-54-22-796_host.exp.exponent.jpg?ex=66020ee7&is=65ef99e7&hm=a5475f6ea2416cc5a5369f6bbd69594c9f57d8f2d3077e8dee05009b0c2db7c3&=&format=webp&width=416&height=400)
-* Já dentro de um exercício:
+
 ![Captura de Tela 3](https://media.discordapp.net/attachments/1012087339780145214/1216897275146797247/Screenshot_2024-03-11-20-54-30-788_host.exp.exponent.jpg?ex=66020ee7&is=65ef99e7&hm=57ddce1791dcfbbaf88c96faeb81384e06496af5d9cef04144aebceafa030281&=&format=webp&width=416&height=820)
 
   
