@@ -1,10 +1,4 @@
 
-#  Nome do Aplicativo
-  
-
-![Logo do Aplicativo](link_para_logo.png)
-
-
 ## Descrição
 
 
